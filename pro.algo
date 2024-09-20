@@ -1,0 +1,61 @@
+//year
+
+ALGORITHM year
+VAR
+    year:INTEGER
+    True:BOOLEAN
+BEGIN
+    IF (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0) THEN
+        RETURN True
+    ELSE:
+       return false
+    END_IF 
+END
+
+
+// age
+ALGORITHM ticket_price
+VAR
+    age:INTEGER
+BEGIN
+    IF age <= 12:
+       return 10
+    elif 13 <= age <= 17:
+        return 15
+    ELSE: # age >= 18
+        return 20
+    END_IF
+END
+
+//Fibonacci
+ALGORITHM fibonacci
+VAR
+    n:INTEGER
+BEGIN
+    IF n <= 0:
+       return 0
+    elif n == 1:
+         return 1
+    else:
+       return fibonacci(n - 1) + fibonacci(n - 2)
+    END_IF
+END
+
+// palindrom javascript
+function Palindrome(s) {
+    
+    s = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    
+    
+    if (s.length <= 1) {
+        return true;
+    }
+
+    
+    if (s[0] === s[s.length - 1]) {
+       
+        return isPalindrome(s.slice(1, -1));
+    } else {
+        return false;
+    }
+}
